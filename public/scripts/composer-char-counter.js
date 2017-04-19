@@ -1,17 +1,13 @@
 $(document).ready(() => {
-  
-  
-
-  $('textarea').keypress(function () {
-    let counterVal = 139 - (Array.from(this.value).length);
+  $('textarea').on('input', function () {
+    const counterVal = 140 - (Array.from(this.value).length);
     $(this).siblings('.counter').text(counterVal);
     if (counterVal < 0) {
-      $( 'textarea' ).addClass( "tooLong" );  
+      $('textarea').addClass('tooLong');
     }
     if (counterVal >= 0) {
-      $( "textarea" ).removeClass( "tooLong" ); 
+      $('textarea').removeClass('tooLong');
     }
   });
 });
-
 
