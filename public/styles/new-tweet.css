@@ -1,0 +1,35 @@
+.new-tweet {
+  background-color: #eee;
+  border: 1px solid darkgrey;
+  border-radius: 10px;
+  margin: 2em;
+  padding: 10px;
+}
+
+.counter {
+    float: right;
+    color: #244751;
+    font-style: italic;
+    font-size: 80%;
+    padding-top: 10px;
+    padding-right: 0.5em;
+}
+
+textarea {
+    padding: 4px;
+    width: 100%;
+}
+
+input {
+    background-color: #00a087;
+    color: white;
+    border-radius: 4px;
+}
+
+.new-tweet h2 { 
+    border-bottom: 1px solid darkgrey; 
+}
+
+.tooLong {
+  color: red;
+}

@@ -15,11 +15,76 @@ html {
  */
 
 body {
-  margin: 0;
-  color: #244751;
   background-color: #eee;
+  color: #244751;
+  font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.container {
+  background-color: white;
+  margin: 0 auto;
+  padding-top: 140px;
+  padding-bottom: 140px;
+  width: 450px;
+}
+
+.all-tweets {
+  margin: 2em;
+}
+
+.avatar {
+  float: left;
+  font-size: 36px;
+  line-height: 80px;
+  margin: 0px;
+  padding: 10px 0px 0px 10px;
+  height: 50px;
+}
+
+.one-tweet header {
+  background: #eee;
+  border-radius: 10px 10px 0px 0px;
+  overflow: hidden;
+}
+
+.one-tweet h2 {
+    line-height: 40px;
+    size: 20px;
+    padding-top: 2px;
+    padding-left: 10px;
+    margin-top: 0px;
+    display: inline-block;
+}
+
+.one-tweet {
+   border: 1px solid darkgrey;
+   border-radius: 10px;
+   margin: 5px;
+   opacity: .5;
+   margin-top: 15px;
+}
+
+.one-tweet:hover {
+  opacity: 1;
+
+}
+
+.tweetBody {
+    padding: 20px;
+    background: white;  
+}
+
+footer {
+    padding: 10px;
+    border-top: 1px solid lightgrey; 
+}
+
+.handle {
+  float: right;
+  padding-right: 10px;
+}
