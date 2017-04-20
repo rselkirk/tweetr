@@ -15,6 +15,12 @@
     padding-right: 0.5em;
 }
 
+.errorMsg {
+  color: #ff0000;
+  font-style: italic;
+  padding-left: 10px;
+}
+
 textarea {
     padding: 4px;
     width: 100%;
@@ -33,3 +39,4 @@ input {
 .tooLong {
   color: red;
 }
+

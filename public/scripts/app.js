@@ -48,7 +48,8 @@ $(document).ready(() => {
   $('form').on('submit', function (event) {
     event.preventDefault();
     if (($('textarea').val()).length === 0) {
-      alert('Type something to make a tweet!');
+      $('.errorMsg').text('Please type a tweet!');
+      //alert('Type something to make a tweet!');
       return;
     }
     if (($('textarea').val()).length > 140) {
@@ -67,11 +68,11 @@ $(document).ready(() => {
   });
 
 
-$( ".compose" ).click(function() {
-  $( ".new-tweet" ).slideToggle( "slow", function() {
-  $('textarea').focus();
+  $('.compose').click(() => {
+    $('.new-tweet').slideToggle('slow', () => {
+      $('textarea').focus();
+    });
   });
-});
 
   $('.new-tweet').hide();
   loadTweets();
