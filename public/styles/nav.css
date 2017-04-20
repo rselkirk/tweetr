@@ -1,9 +1,9 @@
 
 body {
-  margin: 0;
-  color: #244751;
   background-color: #eee;
+  color: #244751;
   font-family: 'Roboto Condensed', sans-serif;
+  margin: 0;
 }
 
 #nav-bar {
@@ -30,3 +30,20 @@ body {
    margin: 0px;
    padding: 0px 0px 0px 10px;
  }
+
+#nav-bar .compose {
+  border: 1px solid #000000;
+  border-radius: 8px;
+  background-color: #eaffff;
+  color: #00a087; 
+  float: right;
+  font-size: 20px;
+  margin-top: 10px;
+  padding: 18px;
+ 
+}
+
+#nav-bar .compose:hover {
+  background-color: #fff1d8;
+  color: #000000;
+}
