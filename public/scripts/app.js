@@ -7,8 +7,9 @@
 
 $(document).ready(() => {
   function sanitize(str) {
-    // TODO
-    return str;
+    let div = document.createElement('div');
+    div.appendChild(document.createTextNode(str));
+    return div.innerHTML;
   }
 
   function createTweetElement(tweetData) {
@@ -24,15 +25,19 @@ $(document).ready(() => {
         </div>
         <footer>
           <span class="ageCounter">${(moment(tweetData.created_at).fromNow())}</span>
+          <i class="fa fa-flag" aria-hidden="true"></i>
+          <i class="fa fa-retweet" aria-hidden="true"></i>
+          <i class="fa fa-heart" aria-hidden="true"></i>
         </footer>
       </article>
     `);
   }
 
   function renderTweets(tweets) {
+    $('.all-tweets').empty(); 
     for (const tweet of tweets) {
       const x = createTweetElement(tweet);
-      $('.all-tweets').prepend(x);
+      $('.all-tweets').append(x);
     }
   }
 
@@ -44,16 +49,14 @@ $(document).ready(() => {
     });
   }
 
-
   $('form').on('submit', function (event) {
     event.preventDefault();
     if (($('textarea').val()).length === 0) {
       $('.errorMsg').text('Please type a tweet!');
-      //alert('Type something to make a tweet!');
       return;
     }
     if (($('textarea').val()).length > 140) {
-      alert('Tweet must be 140 characters or fewer!');
+       $('.errorMsg').text('Tweet must be 140 characters or less!');
       return;
     }
     $.ajax({
@@ -63,6 +66,7 @@ $(document).ready(() => {
       success() {
         loadTweets();
         $('textarea').val('');
+        $('.counter').text('140');
       },
     });
   });

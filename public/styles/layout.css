@@ -26,7 +26,7 @@ body {
  */
 
 .container {
-  background-color: white;
+  background-color: ffffff;
   margin: 0 auto;
   padding-top: 140px;
   padding-bottom: 140px;
@@ -40,10 +40,10 @@ body {
 .avatar {
   float: left;
   font-size: 36px;
+  height: 50px;
   line-height: 80px;
   margin: 0px;
   padding: 10px 0px 0px 10px;
-  height: 50px;
 }
 
 .one-tweet header {
@@ -53,16 +53,16 @@ body {
 }
 
 .one-tweet h2 {
+  display: inline-block;
   line-height: 40px;
-  size: 20px;
+  margin-top: 0px;
   padding-top: 2px;
   padding-left: 10px;
-  margin-top: 0px;
-  display: inline-block;
+  size: 20px;
 }
 
 .one-tweet {
-  border: 1px solid darkgrey;
+  border: 1px solid #a9a9a9;
   border-radius: 10px;
   opacity: 0.7;
   margin-top: 15px;
@@ -73,13 +73,13 @@ body {
 }
 
 .tweetBody {
+  background: white;
   padding: 20px;
-  background: white;  
 }
 
 footer {
+  border-top: 1px solid #d3d3d3;
   padding: 10px;
-  border-top: 1px solid lightgrey; 
 }
 
 .handle {
@@ -92,4 +92,14 @@ footer {
 .ageCounter {
   font-size: 14px;
   font-style: italic;
+}
+
+.fa {
+  float: right;
+  padding: 0px 3px;
+  color: #00a087;
+}
+
+.fa:hover {
+  color: #244751
 }
