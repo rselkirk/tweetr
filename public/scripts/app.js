@@ -51,12 +51,15 @@ $(document).ready(() => {
 
   $('form').on('submit', function (event) {
     event.preventDefault();
+    if ($('textarea').val().trim().length === 0) {
+      $('.errorMsg').text('Please type a tweet!');
+    }
     if (($('textarea').val()).length === 0) {
       $('.errorMsg').text('Please type a tweet!');
       return;
     }
     if (($('textarea').val()).length > 140) {
-       $('.errorMsg').text('Tweet must be 140 characters or less!');
+      $('.errorMsg').text('Tweet must be 140 characters or less!');
       return;
     }
     $.ajax({

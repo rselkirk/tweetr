@@ -48,3 +48,9 @@ body {
   background-color: #fff1d8;
   color: #000000;
 }
+
+.fa-pencil-square-o {
+  float: left;
+  padding-top: 3px;
+  padding-right: 3px;
+}
