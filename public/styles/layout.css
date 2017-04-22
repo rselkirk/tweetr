@@ -26,7 +26,7 @@ body {
  */
 
 .container {
-  background-color: ffffff;
+  background-color: #ffffff;
   margin: 0 auto;
   padding-top: 140px;
   padding-bottom: 140px;
@@ -46,13 +46,13 @@ body {
   padding: 10px 0px 0px 10px;
 }
 
-.one-tweet header {
+.tweets header {
   background: #eee;
   border-radius: 10px 10px 0px 0px;
   overflow: hidden;
 }
 
-.one-tweet h2 {
+.tweets h2 {
   display: inline-block;
   line-height: 40px;
   margin-top: 0px;
@@ -61,14 +61,14 @@ body {
   size: 20px;
 }
 
-.one-tweet {
+.tweets {
   border: 1px solid #a9a9a9;
   border-radius: 10px;
   opacity: 0.7;
   margin-top: 15px;
 }
 
-.one-tweet:hover {
+.tweets:hover {
   opacity: 1;
 }
 
@@ -95,11 +95,18 @@ footer {
 }
 
 .fa {
+  color: #00a087;
   float: right;
   padding: 0px 3px;
-  color: #00a087;
 }
 
 .fa:hover {
   color: #244751
 }
+
+.likes {
+  color: #00a087;
+  float: right;
+  padding-bottom: 5px;
+}
+

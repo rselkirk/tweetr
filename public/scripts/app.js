@@ -14,7 +14,7 @@ $(document).ready(() => {
 
   function createTweetElement(tweetData) {
     return $(`
-      <article class='one-tweet tweet'>
+      <article class='tweets' data-id="${tweetData._id}">
         <header>
           <img class="avatar" src=${tweetData.user.avatars.small}>
           <h2>${sanitize(tweetData.user.name)}</h2>
@@ -28,13 +28,14 @@ $(document).ready(() => {
           <i class="fa fa-flag" aria-hidden="true"></i>
           <i class="fa fa-retweet" aria-hidden="true"></i>
           <i class="fa fa-heart" aria-hidden="true"></i>
+          <span class="likes">0</span>
         </footer>
       </article>
     `);
   }
 
   function renderTweets(tweets) {
-    $('.all-tweets').empty(); 
+    $('.all-tweets').empty();
     for (const tweet of tweets) {
       const x = createTweetElement(tweet);
       $('.all-tweets').append(x);
@@ -48,6 +49,24 @@ $(document).ready(() => {
       success: renderTweets,
     });
   }
+
+  $('.all-tweets').on('click', '.fa-heart', function () {
+    const likes = $(this).closest('[data-id]').find('.likes').text();
+    const numLikes = Number(likes);
+    if (numLikes === 1) {
+      console.log(typeof likes);
+      $(this).closest('[data-id]').find('.likes').text(function(i, t) {
+      return Number(t) - 1;
+      $(this).toggleClass('pressed');
+      });
+    }
+    if (numLikes === 0) {
+      $(this).closest('[data-id]').find('.likes').text(function(i, t) {
+      return Number(t) + 1;
+      $(this).toggleClass('pressed');
+      });
+    }
+  });
 
   $('form').on('submit', function (event) {
     event.preventDefault();
@@ -74,7 +93,6 @@ $(document).ready(() => {
     });
   });
 
-
   $('.compose').click(() => {
     $('.new-tweet').slideToggle('slow', () => {
       $('textarea').focus();
@@ -84,4 +102,5 @@ $(document).ready(() => {
   $('.new-tweet').hide();
   loadTweets();
 }); // doc.ready close.
+
 
